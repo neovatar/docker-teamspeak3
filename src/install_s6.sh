@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-set -x
+
 S6OVERLAY_VERSION="1.19.1.1"
 S6OVERLAY_SHA256="b5d360383dd519a33bd39651c43c49b4cf0e95344a94ba65dd8628eefd9ee5cb"
 S6OVERLAY_ARCHIVE=/tmp/s6-overlay-amd64.tar.gz
