@@ -1,0 +1,4 @@
+#!/usr/bin/with-contenv /bin/bash
+export LD_LIBRARY_PATH="/ts3/teamspeak3-server_linux_amd64:$LD_LIBRARY_PATH"
+cd /ts3/teamspeak3-server_linux_amd64
+exec s6-setuidgid ts3 /ts3/teamspeak3-server_linux_amd64/ts3server inifile=/ts3/data/ts3server.ini
