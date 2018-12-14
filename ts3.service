@@ -4,15 +4,13 @@ After=docker.service
 Requires=docker.service
 
 [Service]
-TimeoutStartSec=5
-Restart=always
 ExecStartPre=-/usr/bin/docker stop ts3
 ExecStartPre=-/usr/bin/docker rm ts3
 ExecStart=/usr/bin/docker run \
   --rm \
   --name ts3 \
   --net=host \
-  -v /var/ts3/data:/ts3/data \
+    -v /var/docker/volumes/ts3:/ts3/data \
   neovatar/ts3:latest
 ExecStop=-/usr/bin/docker stop ts3
 
